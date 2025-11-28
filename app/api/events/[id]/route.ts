@@ -6,5 +6,11 @@ export async function GET(
 ) {
   const { id } = await context.params;
 
-  return Response.json({ event: id });
+  return Response.json({
+    event: {
+      id,
+      title: "Sample Event Title",
+      status: "open"
+    }
+  });
 }
