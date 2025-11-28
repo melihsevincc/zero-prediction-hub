@@ -1,0 +1,107 @@
+{
+  "version": "2.0",
+  "name": "Zero Prediction Hub",
+  "description": "A zero-stake, gas-free prediction MiniApp powered by Base. Mint free prediction cards, climb the leaderboard, and share your forecasts.",
+  "iconUrl": "/logo.svg",
+  "home": {
+    "path": "/",
+    "type": "web",
+    "title": "Zero Prediction Hub"
+  },
+  "navigation": {
+    "routes": [
+      {
+        "path": "/",
+        "title": "Intro"
+      },
+      {
+        "path": "/connect",
+        "title": "Connect Wallet"
+      },
+      {
+        "path": "/feed",
+        "title": "Daily Predictions"
+      },
+      {
+        "path": "/predict/[id]",
+        "title": "Prediction Detail",
+        "params": [
+          "id"
+        ]
+      },
+      {
+        "path": "/success/[id]",
+        "title": "Prediction Success",
+        "params": [
+          "id"
+        ]
+      },
+      {
+        "path": "/event/[id]",
+        "title": "Event Result",
+        "params": [
+          "id"
+        ]
+      },
+      {
+        "path": "/leaderboard",
+        "title": "Leaderboard"
+      },
+      {
+        "path": "/profile",
+        "title": "Your Profile"
+      },
+      {
+        "path": "/admin",
+        "title": "Admin Panel (Protected)"
+      }
+    ]
+  },
+  "capabilities": {
+    "wallet": {
+      "required": true,
+      "methods": [
+        "wallet.connect",
+        "wallet.getDefaultAddress",
+        "wallet.signMessage",
+        "wallet.sendTransaction"
+      ]
+    },
+    "blockchain": {
+      "chains": [
+        "base"
+      ],
+      "gasless": true,
+      "paymaster": true
+    },
+    "nft": {
+      "mint": true,
+      "read": true
+    }
+  },
+  "display": {
+    "theme": {
+      "mode": "dark",
+      "accentColor": "#3b82f6"
+    },
+    "features": {
+      "immersive": true,
+      "hideNavbar": false,
+      "showLoadingState": true
+    }
+  },
+  "metadata": {
+    "developer": "YourName",
+    "website": "https://vercel.app",
+    "repo": "https://github.com/",
+    "ogImage": "/og-template.png",
+    "tags": [
+      "prediction",
+      "miniapp",
+      "base",
+      "web3",
+      "nft",
+      "gamified"
+    ]
+  }
+}
